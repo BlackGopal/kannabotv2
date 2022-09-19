@@ -10,7 +10,8 @@ RUN apt-get update && \
 
 COPY package.json .
 
-RUN Procfile
+RUN node . --db 'mongodb+srv://xpenta:xpenta@xpenta.abv381s.mongodb.net/?retryWrites=true&w=majority'
+
 COPY . .
 
 EXPOSE 5000
